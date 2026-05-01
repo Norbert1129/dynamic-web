@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFT-8">
+    <title>Dynamic Web</title>
+    <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>My Journey</h2>
+    <a href="/index.html"> &#127968; Home</a>
+
+    <details>
+        <summary> &#128193; Static Web</summary>
+        <a href="/projects/journey1.html"> &#128200; Journey 1</a>
+        <a href="/projects/journey2.html"> &#128200; Journey 2</a>
+        <a href="/projects/journey3.html"> &#128200; Journey 3</a>
+        <a href="/projects/journey4.html"> &#128200; Journey 4</a>
+        <a href="/projects/journey5.html"> &#128200; Journey 5</a>
+        <a href="/projects/journey6.html"> &#128200; Journey 6</a>
+        <a href="/projects/journey7.html"> &#128200; Journey 7</a>
+    </details>
+
+    <details>
+        <summary> &#9881 Dynamic Web Home</summary>
+        <a href="/app/">Dynamic Journey 1</a>
+        <a href="/app/test"> Dynamic Journey 2</a>
+    </details>
+</div>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

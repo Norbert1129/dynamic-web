@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add Journey</h1>
+
+<form method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Content:</label><br>
+    <textarea name="content"></textarea><br><br>
+
+    <button type="submit">Add</button>
+</form>
+
+{% endblock %}

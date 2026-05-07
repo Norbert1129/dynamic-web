@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Journey 6 &#128640;</h1>
+    
+    <h2>Dynamic DNS with Cloudflare</h2>
+        <p>
+        My AWS server does not have a static IP, so every restart
+        changes its public IP. This caused my domain to stop working
+        unless I update the DNS manually.
+    
+        To solve this, I created a Bash script that automatically updates
+        my Cloudflare DNS record.
+        </p>
+    <h4>The script:</h4>
+        <ul>
+            <li>gets the current public IP using curl</li>
+            <li>compares it with the previously saved IP</li>
+            <li>if the IP changed, it updates the A record via the Cloudflare API</li>
+            <li>saves the new IP for future checks</li>
+        </ul>
+    <h4>I also configured:</h4>
+        <ul>
+            <li>an A record for nnmth.com</li>
+            <li>a CNAME record for www &#10145; nnmth.com</li>
+        </ul>
+        <p>
+        This way I only need to update one record.
+
+        Finally, I used a corn job to run the script every 5 minutes,making
+        the process fully automated.
+
+        Through this, I learned how DNS works, how Cloudflare proxying
+        hides the real server IP, and how to automate infrastructure tasks
+        using Bash and APIs.
+        </p>
+</div>
+
+<div class="gallery">
+        <img src="/dynamic-web/images/img7.png" class="centered-image">
+        <img src="/dynamic-web/images/img8.png" class="centered-image">
+        <img src="/dynamic-web/images/img9.png" class="centered-image">
+</div>
+{% endblock %}

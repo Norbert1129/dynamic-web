@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Journey 5 &#128640;</h1>
+    <h2>Server Security Setup</h2>
+        <p>
+        I configured several basic security layers on my server to reduce the attack 
+        surface and improve overall protection.
+        </p>
+    <h2>Firewall (UFW) &#129521;</h2>
+        <h4>
+        I used UFW to allow only the necessary ports:
+        </h4>
+        <p>
+        <ul>
+            <li>80 (HTTP)</li>
+            <li>443 (HTTPS)</li>
+            <li>2222 (SSH)</li>
+        </ul>
+        All other ports are blocked by default, meaning the server is only
+        accessible through essential services.
+        </p>
+    <h2>SSH Hardening &#128187; ---- &#128279; ---- &#128421;</h2>
+        <h4>
+        I improved SSH security by:
+        </h4>
+        <p>
+        <ul>
+            <li>using key-based authentication instead of passwords.</li>
+            <li>changing the default SSH port from 22 to 2222.</li>
+        </ul>
+        This reduces the number of automated attacks targeting the server.
+        </p>
+    <h2>Fail2ban Protection &#128737;</h2>
+    <p>
+    I set up Fail2ban to monitor login attempts and automatically block suspicious IP addresses.
+    </p>
+    <h4>Configuration:</h4>
+        <ul>
+            <li>3 failed login attempts.</li>
+            <li>within a 10-minute window.</li>
+            <li>results in a 1-hour ban.</li>
+        </ul>
+    <p>
+    This helps to protect the server from brute-force attacks.
+    </p>
+    <p>Please check photos below. &#128071;</p>
+     
+</div>
+<div class="gallery">
+    <img src="/dynamic-web/images/img4.png" class="centered-image">
+    <img src="/dynamic-web/images/img5.png" class="centered-image">
+    <img src="/dynamic-web/images/img6.png" class="centered-image">
+</div>
+
+{% endblock %}

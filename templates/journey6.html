@@ -37,8 +37,8 @@
 </div>
 
 <div class="gallery">
-        <img src="/dynamic-web/images/img7.png" class="centered-image">
-        <img src="/dynamic-web/images/img8.png" class="centered-image">
-        <img src="/dynamic-web/images/img9.png" class="centered-image">
+        <img src="{{ url_for('static', filename='images/img7.png') }}" class="my-image">
+        <img src="{{ url_for('static', filename='images/img8.png') }}" class="my-image">
+        <img src="{{ url_for('static', filename='images/img9.png') }}" class="my-image">
 </div>
 {% endblock %}

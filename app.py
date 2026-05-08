@@ -1,4 +1,3 @@
-\
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
@@ -24,9 +23,15 @@ def add_journey():
         return redirect("/journeys")
     return render_template("add.html")
 
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/base")
+def base():
+    return render_template("/Dynamichome.html")
 
 @app.route("/first")
 def first():
@@ -62,7 +67,7 @@ def about():
 
 @app.route("/test")
 def test():
-    return render_template("index2.html")
+    return render_template("Dynamicjourney.html")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000)

@@ -29,8 +29,8 @@ def add_journey():
 def home():
     return render_template("index.html")
 
-@app.route("/base")
-def base():
+@app.route("/dynamichome")
+def dynamichome():
     return render_template("/Dynamichome.html")
 
 @app.route("/first")
@@ -65,9 +65,13 @@ def seventh():
 def about():
     return "About page"
 
-@app.route("/test")
-def test():
-    return render_template("Dynamicjourney.html")
+@app.route("/dynamic1")
+def dynamic1():
+    return render_template("Dynamicjourney1.html")
+
+@app.route("/dynamic2")
+def dynamic2():
+    return render_template("Dynamicjourney2.html")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000)
